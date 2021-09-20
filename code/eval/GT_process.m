@@ -1,13 +1,14 @@
 % This script is used to read ground truth from .txt file to Matlab vector
+% The vector is recored as second-wise, starting from 1s to 86401s (a day)
 % The overlaps between different labeled aircraft events are merged
 
 % Input: path to the ground truth text files
-% Output: label_segment (two column vector with start and end time)
+% Output: label_segment (two-columns vector with start and end time)
 
 clc;clear;close all
 
 % read GTs between start and end days
-path = 'D:\seismology_acoustic\AT_detection2';
+path = 'path to your ground truth text files';
 files = fullfile(path, '*.txt');
 dir = dir(files);
 
@@ -83,7 +84,7 @@ end
 
 decision_labels = logical(decision_labels);
 
-% find and output label segment (with binary 1)
+% find and output label segment
 label_segment = []; 
 label_index = find(diff(decision_labels')==1) + 1; 
 
