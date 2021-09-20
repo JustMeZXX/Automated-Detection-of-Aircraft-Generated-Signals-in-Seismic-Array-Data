@@ -1,6 +1,6 @@
 ### Dataset
-The dataset used in this paper can be downloaded from: [Dataset](https://drive.google.com/drive/folders/13jOnlugcSmGpu27-i477cq_AxN1kuV3X?usp=sharing). 
+The dataset used in this paper can be downloaded from: [Dataset]. 
 
-The dataset consists of training, validation, and test, which are created from Julian day 135 to 152 of 2014. Since a modified four-fold time series cross-validation was applied in the experiments, the random-split training and validation sets along with the corresponding test set under different seismic stations are saved at the different folder for each fold split for easy manipulation.
+The dataset consists of training, validation, and test, which are created from Julian day 135 to 152 of 2014. Since a modified four-fold time series cross-validation was applied in the experiments, the random-split training and validation sets along with the corresponding test set under different seismic stations (R2120, R2308, R3514, R5819, R6005) are saved at the different folder for each fold split (fold_01, fold_02, fold_03, fold_04) for easy manipulation.
 
-
+Specifically, 
