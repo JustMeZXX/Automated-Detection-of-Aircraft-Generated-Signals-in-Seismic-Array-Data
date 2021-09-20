@@ -86,5 +86,3 @@ labels = [(0:5:86400-100)',(100:5:86400)'];
 
 save('labels_145.mat','labels','label_segment') % same as .mat file if needed
 
-
-
