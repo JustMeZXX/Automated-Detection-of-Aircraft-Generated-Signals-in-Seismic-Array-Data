@@ -3,7 +3,7 @@
 % "start_day_index" and "num_days" (depend on station availability)
 
 % Since IRIS repository may throw random errors when fetching the data,
-% we save these error messges at the end of this script for reference. 
+% we save these error messges at the end of this script for reference.
 
 % Input: path to the ground truth text files
 % Output: throwed error messages
@@ -124,7 +124,7 @@ for i = start_date: step: (end_date + 1) - window_length % + 1 means we need to 
     % find overlap with labeled GTs
     [l,r] = RangeIntersection(window_cur_absolute(:,1),window_cur_absolute(:,2),window_GT_absolute_sort_merged(:,1),window_GT_absolute_sort_merged(:,2));
     overlap_intervals = [l(:), r(:)];
-
+    
     if ~isempty(overlap_intervals)
         
         % For current window has overlap with any GT:
@@ -149,10 +149,11 @@ for i = start_date: step: (end_date + 1) - window_length % + 1 means we need to 
                 mean_rows = mean(S_dB, 2);
                 
                 for row = 1:size(S_dB,1)
-                    S_dB(row,:) = S_dB(row,:) - mean_rows(row); 
+                    S_dB(row,:) = S_dB(row,:) - mean_rows(row);
                 end
+                
                 for col = 1:size(S_dB,2)
-                    S_dB(:,col) = S_dB(:,col) - mean_cols(col); 
+                    S_dB(:,col) = S_dB(:,col) - mean_cols(col);
                 end
                 
                 S_dB = imgaussfilt(S_dB);
@@ -224,7 +225,8 @@ for i = start_date: step: (end_date + 1) - window_length % + 1 means we need to 
         count_negative = count_negative + 1;
         random_num = randi(s, [0 sample_rate-1]);
         
-        if mod(count_negative, sample_rate) == random_num 
+        if mod(count_negative, sample_rate) == random_num
+            
             count_negative_valid = count_negative_valid + 1;
             
             try
