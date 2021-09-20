@@ -21,3 +21,4 @@ for i = 1:length(dir)
     
     imwrite(cur_img_resized,dir(i).name) % save as the current name
 end
+
