@@ -1,4 +1,4 @@
-% This script is used to resized the saved spectral samples
+% This script is used to resized the samples to match ResNet-18 input size
 
 % Input: path to the source samples (unresized)
 % Output: the resized spectrogram images are saved to the destinate file
