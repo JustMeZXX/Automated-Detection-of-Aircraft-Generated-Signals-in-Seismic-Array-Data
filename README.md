@@ -13,6 +13,3 @@ The code is released in [code](https://github.com/JustMeZXX/Automated-Detection-
 
 ### Bibtex
 The citing information will be available after the paper is accepted. 
-
-
-Please feel free to contact me at xinxiang@smu.edu if you have any questions. 
