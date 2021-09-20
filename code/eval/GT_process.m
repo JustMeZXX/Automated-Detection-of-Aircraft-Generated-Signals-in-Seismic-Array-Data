@@ -43,30 +43,8 @@ for i = start_day_index: end_day_index
     GT = [GT;GT_cur];
 end
 
-window_GT_absolute_all = GT; % unmerged GT
-
 % merge overlaps
-window_GT_absolute_all_sort = sortrows(window_GT_absolute_all,5);
-
-GT_days = window_GT_absolute_all_sort(:,1);
-window_GT_absolute_sort = window_GT_absolute_all_sort(:,5:6);
-
-window_GT_absolute_sort_merged = window_GT_absolute_sort(1,:);
-for i = 2:size(window_GT_absolute_sort,1)
-    cur_window_GT_sort = window_GT_absolute_sort(i,:);
-    top_window_GT_sort_merged = window_GT_absolute_sort_merged(end,:);
-    
-    if top_window_GT_sort_merged(2) < cur_window_GT_sort(1)
-        window_GT_absolute_sort_merged = [window_GT_absolute_sort_merged;cur_window_GT_sort];
-        
-    elseif top_window_GT_sort_merged(2) < cur_window_GT_sort(2)
-        top_window_GT_sort_merged(2) = cur_window_GT_sort(2);
-        
-        window_GT_absolute_sort_merged = window_GT_absolute_sort_merged(1:end-1,:);
-        window_GT_absolute_sort_merged = [window_GT_absolute_sort_merged;top_window_GT_sort_merged];
-        
-    end
-end
+[GT_days, window_GT_absolute_sort_merged] = MergeOverlapsGT(GT);
 
 start_date = GT_days(1,1) - 1;
 end_date = GT_days(end,1) - 1;
