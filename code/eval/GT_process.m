@@ -40,7 +40,7 @@ for i = start_day_index: end_day_index
                 str2double(str_cur{2}) + str2double(str_cur{4})/86400];
         end
     end
-    GT = [GT;GT_cur];
+    GT = [GT;GT_cur]; % unmerged GT
 end
 
 % merge overlaps
