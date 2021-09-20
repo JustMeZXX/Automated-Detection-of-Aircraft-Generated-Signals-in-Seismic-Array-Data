@@ -12,8 +12,8 @@ files = fullfile(path, '*.txt');
 dir = dir(files);
 
 num_days = 1; % number of test days
-start_day_index = 17;
-end_day_index = start_day_index + num_days - 1;
+start_day_index = 17; % index of start date
+end_day_index = start_day_index + num_days - 1; % index of start date
 
 count_days = 0;
 GT = [];
@@ -42,7 +42,7 @@ for i = start_day_index: end_day_index
     GT = [GT;GT_cur];
 end
 
-window_GT_absolute_all = GT;
+window_GT_absolute_all = GT; % unmerged GT
 
 %% merge overlaps
 window_GT_absolute_all_sort = sortrows(window_GT_absolute_all,5);
@@ -83,8 +83,7 @@ end
 
 decision_labels = logical(decision_labels);
 
-% find detection segments with binary 1
-label_segment = [];
+label_segment = []; % find detection segments with binary 1
 label_index = find(diff(decision_labels')==1) + 1;
 
 for i = 1:length(label_index)
