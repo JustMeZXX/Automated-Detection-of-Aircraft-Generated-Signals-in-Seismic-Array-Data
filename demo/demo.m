@@ -6,7 +6,7 @@
 % ResNet-18 model is obtained by runnding model_training.py on the its 
 % training and validation data within the the same fold
 
-% The ground truth is also pre-savedm and can be obtained by running 
+% The ground truth is also pre-saved, and can be obtained by running 
 % prep_ground_truth.m on day 145
 
 % Input: pre-saved probablily (.mat file) for each station at day 145;
