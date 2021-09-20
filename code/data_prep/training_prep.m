@@ -149,10 +149,10 @@ for i = start_date: step: (end_date + 1) - window_length % + 1 means we need to 
                 mean_rows = mean(S_dB, 2);
                 
                 for row = 1:size(S_dB,1)
-                    S_dB(row,:) = S_dB(row,:) - mean_rows(row);
+                    S_dB(row,:) = S_dB(row,:) - mean_rows(row); 
                 end
                 for col = 1:size(S_dB,2)
-                    S_dB(:,col) = S_dB(:,col) - mean_cols(col);
+                    S_dB(:,col) = S_dB(:,col) - mean_cols(col); 
                 end
                 
                 S_dB = imgaussfilt(S_dB);
@@ -224,7 +224,7 @@ for i = start_date: step: (end_date + 1) - window_length % + 1 means we need to 
         count_negative = count_negative + 1;
         random_num = randi(s, [0 sample_rate-1]);
         
-        if mod(count_negative, sample_rate) == random_num
+        if mod(count_negative, sample_rate) == random_num 
             count_negative_valid = count_negative_valid + 1;
             
             try
