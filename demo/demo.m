@@ -1,6 +1,10 @@
 % This script shows a simple demonstration for the automated aircraft 
 % detection system at day 145 using all five seismic stations
 
+% Before running this demo, please download the necessary functions in
+% Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data/code/functions/
+% and add them into matlab path
+
 % The probability of each station is pre-saved, which can be obtained by
 % running model_test.py on the test data of day 145, where the pre-trained
 % ResNet-18 model is obtained by runnding model_training.py on the its 
