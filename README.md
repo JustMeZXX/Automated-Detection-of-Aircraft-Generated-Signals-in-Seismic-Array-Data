@@ -1,1 +1,1 @@
-# Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data-
+# Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data
