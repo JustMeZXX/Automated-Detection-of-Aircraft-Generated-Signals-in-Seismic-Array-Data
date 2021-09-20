@@ -3,7 +3,7 @@
 This repo is the official implementation for [A Data-Driven Framework for Automated Detection of Aircraft-Generated Signals in Seismic Array Data Using Machine Learning]
 
 ### Demo
-The demo is provided in https://github.com/JustMeZXX/Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data/tree/main/demo, please follow the instructions on demo.m to start the system. 
+The demo is provided in https://github.com/JustMeZXX/Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data/tree/main/demo, please follow the instructions in demo.m to start the detection system. Also, please download and add functions in https://github.com/JustMeZXX/Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data/tree/main/code/functions to the Matlab path before running the system. 
 
 ### Dataset
 The dataset is uploaded in https://github.com/JustMeZXX/Automated-Detection-of-Aircraft-Generated-Signals-in-Seismic-Array-Data/tree/main/data, please follow the readme file to get access to the data.
