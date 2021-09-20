@@ -6,7 +6,7 @@
 
 clc;clear;close all
 
-%% read GTs between start and end days
+% read GTs between start and end days
 path = 'D:\seismology_acoustic\AT_detection2';
 files = fullfile(path, '*.txt');
 dir = dir(files);
@@ -44,7 +44,7 @@ end
 
 window_GT_absolute_all = GT; % unmerged GT
 
-%% merge overlaps
+% merge overlaps
 window_GT_absolute_all_sort = sortrows(window_GT_absolute_all,5);
 
 GT_days = window_GT_absolute_all_sort(:,1);
