@@ -83,8 +83,9 @@ end
 
 decision_labels = logical(decision_labels);
 
-label_segment = []; % find detection segments with binary 1
-label_index = find(diff(decision_labels')==1) + 1;
+% find and output label segment (with binary 1)
+label_segment = []; 
+label_index = find(diff(decision_labels')==1) + 1; 
 
 for i = 1:length(label_index)
     
@@ -101,4 +102,5 @@ for i = 1:length(label_index)
     
     label_segment = [label_segment;int32(index_cur)];
 end
+
 
