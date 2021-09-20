@@ -46,33 +46,11 @@ for i = start_day_index: end_day_index
                 str2double(str_cur{2}) + str2double(str_cur{4})/86400];
         end
     end
-    GT = [GT;GT_cur];
+    GT = [GT;GT_cur]; % unmerged GT
 end
-
-window_GT_absolute_all = GT; % unmerged GT
 
 % merge overlaps
-window_GT_absolute_all_sort = sortrows(window_GT_absolute_all,5);
-
-GT_days = window_GT_absolute_all_sort(:,1);
-window_GT_absolute_sort = window_GT_absolute_all_sort(:,5:6);
-
-window_GT_absolute_sort_merged = window_GT_absolute_sort(1,:);
-for i = 2:size(window_GT_absolute_sort,1)
-    cur_window_GT_sort = window_GT_absolute_sort(i,:);
-    top_window_GT_sort_merged = window_GT_absolute_sort_merged(end,:);
-    
-    if top_window_GT_sort_merged(2) < cur_window_GT_sort(1)
-        window_GT_absolute_sort_merged = [window_GT_absolute_sort_merged;cur_window_GT_sort];
-        
-    elseif top_window_GT_sort_merged(2) < cur_window_GT_sort(2)
-        top_window_GT_sort_merged(2) = cur_window_GT_sort(2);
-        
-        window_GT_absolute_sort_merged = window_GT_absolute_sort_merged(1:end-1,:);
-        window_GT_absolute_sort_merged = [window_GT_absolute_sort_merged;top_window_GT_sort_merged];
-        
-    end
-end
+[GT_days, ~] = MergeOverlapsGT(GT);
 
 % sliding window iteration
 date_string_initial = {'2014-01-01 00:00:00.00'};
