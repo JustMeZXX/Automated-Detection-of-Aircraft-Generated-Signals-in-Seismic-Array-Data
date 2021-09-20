@@ -1,7 +1,10 @@
 ### Dataset
-The mulit-camera night time traffic surveillance datasets used in this paper can be downloaded from: [Dataset](https://drive.google.com/drive/folders/13jOnlugcSmGpu27-i477cq_AxN1kuV3X?usp=sharing). 
+The dataset used in this paper can be downloaded from: [Dataset](https://drive.google.com/drive/folders/13jOnlugcSmGpu27-i477cq_AxN1kuV3X?usp=sharing). 
 
-The dataset consists of synchronized front and rear-view night time traffic surveillance videos which are recorded by two iPhone 8 with 1920×1088 resolutions at 30 FPS. The captured videos are in both sparse and dense traffic situations, within which two lighting conditions, e.g., low and dark, are separately provided by adjusting the iPhone lens exposure time. These videos are provided as .avi files in folder "./videos". 
+The dataset consists of training, validation, and test sets 
+
+
+synchronized front and rear-view night time traffic surveillance videos which are recorded by two iPhone 8 with 1920×1088 resolutions at 30 FPS. The captured videos are in both sparse and dense traffic situations, within which two lighting conditions, e.g., low and dark, are separately provided by adjusting the iPhone lens exposure time. These videos are provided as .avi files in folder "./videos". 
 
 The vehicles at each 1-minute video (1800 frames) are all carefully annotated, where a vehicle contour (in polygon) at each frame is labeled as a 4x3 matrix. The matrix rows reprenset vertices of a vehicle contour in an anti-clockwise direction. The vehicle identies are given in the first column, and the x-y coordinates of vertices are given in the second and third columns. These polygon annotations are provided as .mat files in folder "./labels/vehicle_contour_polygon". 
 
