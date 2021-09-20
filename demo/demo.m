@@ -1,5 +1,5 @@
-% This script shows a simple demonstration for the automated detection 
-% system at day 145 using all five seismic stations
+% This script shows a simple demonstration for the automated aircraft 
+% detection system at day 145 using all five seismic stations
 
 % The probability of each station is pre-saved, which can be obtained by
 % running model_test.py on the test data of day 145, where the pre-trained
