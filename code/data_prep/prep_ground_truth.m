@@ -82,7 +82,7 @@ for i = 1:length(label_index)
     label_segment = [label_segment;int32(index_cur)];
 end
 
-labels = [(0:5:86400-100)',(100:5:86400)'];
+windows_loc = [(0:5:86400-100)',(100:5:86400)'];
 
-save('labels_145.mat','labels','label_segment') % same as .mat file if needed
+save('labels_145.mat','windows_loc','label_segment') % same as .mat file if needed
 
