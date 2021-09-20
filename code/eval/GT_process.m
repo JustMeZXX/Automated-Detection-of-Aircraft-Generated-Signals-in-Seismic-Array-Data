@@ -13,8 +13,8 @@ files = fullfile(path, '*.txt');
 dir = dir(files);
 
 num_days = 1; % number of test days
-start_day_index = 17; % index of start date
-end_day_index = start_day_index + num_days - 1; % index of start date
+start_day_index = 17; % index of start date (index 17: day 145)
+end_day_index = start_day_index + num_days - 1; % index of end date
 
 count_days = 0;
 GT = [];
@@ -28,7 +28,7 @@ for i = start_day_index: end_day_index
     GT_cur = [];
     for num_rows = 2:size(matches,2)
         str_cur = strsplit(matches{num_rows});
-        if str_cur{5} == 'A'
+        if str_cur{5} == 'A' % only use labels with high confidence
             count = count + 1;
             
             time_length = abs(str2double(str_cur{3})-str2double(str_cur{4}));
@@ -104,4 +104,5 @@ for i = 1:length(label_index)
     label_segment = [label_segment;int32(index_cur)];
 end
 
+save('labels_145.mat','label_segment') % same as .mat file if needed
 
