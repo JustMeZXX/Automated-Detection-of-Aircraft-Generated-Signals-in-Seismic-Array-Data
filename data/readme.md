@@ -5,6 +5,6 @@ The dataset consists of training, validation, and test, which are created from J
 
 The pre-trained ResNet-18 models for five different seismic stations for each of the four fold splits are saved as .pt files in folder "./checkpoints". 
 
-The processed ground truth for each of the four fold splits (two days within one fold) are saved as .mat files in folder "./labels".
+The processed ground truth for each of the four fold splits (two days within one fold) are saved as .mat files in folder "./labels". The labels consist of both labeled aircraft semgents and second-wise window locations for the test samples of a day. 
 
 To save time in running the system on the test sets, the pre-calculated output probabilities of ResNet-18 model for each of the seismic station at each fold split are saved as .mat files in folder "./prob". 
