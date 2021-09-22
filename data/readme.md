@@ -7,4 +7,4 @@ The pre-trained ResNet-18 models for five different seismic stations for each of
 
 The processed ground truth for each of the four fold splits (two days within one fold) are saved as .mat files in folder "./labels".
 
-In addition, for
+To save time in running the system on the test sets, the pre-calculated output probabilities of ResNet-18 model for each of the seismic station at each fold split are saved as .mat files in folder "./prob". 
