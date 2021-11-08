@@ -16,7 +16,7 @@ If you find our work useful for your research, please consider citing:
 
     @article{10.1785/0220210198,
       author = {Zhang, Xinxiang and Arrowsmith, Stephen and Tsongas, Sotirios and Hayward, Chris and Meng, Haoran and Ben‐Zion, Yehuda},
-      title = "{A Data‐Driven Framework for Automated Detection of Aircraft‐Generated Signals in Seismic Array Data Using Machine Learning}",
+      title = {A Data‐Driven Framework for Automated Detection of Aircraft‐Generated Signals in Seismic Array Data Using Machine Learning},
       journal = {Seismological Research Letters},
       year = {2021},
       month = {11},
